@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Cairo';
+    src: url('../font/Cairo.ttf');
+
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(../iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Prefer#c0392b icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Cairo';
+  tab-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-o-tab-highlight-color: rgba(0,0,0,0);
+	-moz-tab-highlight-color: rgba(0,0,0,0);
+	-ms-tab-highlight-color: rgba(0,0,0,0);
+	width: 100%;
+  overflow-x: hidden;
+}
+body {
+  background: #fff;
+  color: #3B3C43;
+  font-size: 13px;
+}
+a {
+	text-decoration: none;
+	color: #222;
+}
+
+.frame {
+  float: left;
+   width: 100%;
+   box-sizing: border-box;
+   min-height: 100vh;
+   background: #fff;
+   padding: 5px;
+}
+.splashScreen {
+   position: fixed;
+   z-index: 2000;
+}
+.logo {
+   float: left;
+   width: 100%;
+   text-align: center;
+   margin-top: 25vh;
+}
+.logo img {
+   float: left;
+   width: 70%;
+   margin-left: 15%;
+}
+
+
+.spinAuth {
+   -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    width: 100%;
+    float: left;
+    min-height: 100vh;
+    display: none;
+}
+.spinAuth .loginFrame {
+   position: absolute;
+    top: 0;
+    z-index: 900;
+    width: inherit;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    /* -- transition is the magic sauce for animation -- */
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.spinAuth.flip .loginFrame {
+   z-index: 900;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+.spinAuth .registerFrame {
+    position: absolute;
+    padding-top: 20px;
+    top: 0;
+    z-index: 800;
+    width: inherit;
+    -webkit-transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateY(-180deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    /* -- transition is the magic sauce for animation -- */
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.spinAuth.flip .registerFrame {
+    z-index: 1000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+.loginImage {
+   float: left;
+   width: 100%;
+   margin-top: 90px;
+   margin-bottom: 20px;
+}
+.registerImage {
+   float: left;
+   width: 100%;
+   margin-top: 30px;
+   margin-bottom: 20px;
+}
+.loginImage img {
+   float: left;
+   width: 50%;
+   margin-left: 25%;
+}
+.registerImage img {
+   float: left;
+   width: 30%;
+   margin-left: 35%;
+}
+.form {
+   float: left;
+   width: 80%;
+   margin-left: 10%;
+}
+.form span {
+   float: left;
+   width: 100%;
+   font-weight: bold;
+   font-size: 17px;
+   color: #99CC66;
+   text-align: center;
+}
+span.cursor {
+   float: left;
+   width: 100%;
+   margin-top: 10px;
+   cursor: pointer;
+   text-align: center;
+   font-size: 13px;
+   color: #9c6;
+}
+.form input {
+   float: left;
+   width: 100%;
+   box-sizing: border-box;
+   padding: 10px;
+   height: 45px;
+   border-radius: 15px;
+   -webkit-border-radius: 15px;
+   margin-top: 10px;
+   font-size: 17px;
+   border: 2px solid #ddd;
+}
+button {
+   float: left;
+   width: 100%;
+   box-sizing: border-box;
+   height: 45px;
+   border: 0px solid transparent;
+   border-radius: 15px;
+   font-size: 17px;
+   font-weight: bold;
+   -webkit-border-radius: 15px;
+
+}
+.loginBtn, .registerBtn {
+   background: #99CC66;
+   color: #fff;
+   margin-top: 15px;
+}
+.googleBtn {
+   background: #cc352a;
+   color: #fff;
+   font-size: 14px;
+   margin-bottom: 15px;
+   width: 80%;
+   margin-left: 10%;
+}
+.registerError, .loginError {
+   float: left;
+   margin-top: 10px;
+   background: pink;
+   color: red;
+   box-sizing: border-box;
+   padding: 5px;
+   font-size: 14px;
+   display: none;
+   width: 100%;
+}

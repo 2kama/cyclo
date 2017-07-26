@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+
+
+  </head>
+  <body>
+
+     
+      <!-- SplashScreen -->
+      <div class="frame splashScreen">
+          <div class="logo">
+              <img src="img/cyclo.png" />
+          </div>
+      </div>
+
+
+      <!-- Authentication fields -->
+      <div class="spinAuth">
+          <!-- Login Screen -->
+          <div class="frame loginFrame">
+              <div class="loginImage"><img src="img/cyclo3.png" /></div>
+
+              <div class="form loginForm">
+                  <span>LOGIN</span>
+                  <input type="email" class="loginEmail" placeholder="Email" />
+                  <input type="password" class="loginPass" placeholder="Password" />
+                  <button class="loginBtn">LOG IN</button>
+                  <div class="loginError"></div>
+              </div>
+
+              <span class="cursor">Create Account</span>
+
+              
+          </div>
+
+
+          <!-- Register Screen -->
+          <div class="frame registerFrame">
+              <div class="registerImage"> <img src="img/cyclo3.png"></div>
+
+              <div class="form registerForm">
+                  <span>REGISTER</span>
+                  <input type="text" class="registerName" placeholder="Full Name" />
+                  <input type="email" class="registerEmail" placeholder="Email" />
+                  <input type="password" class="registerPass" placeholder="Password" />
+                  <input type="password" class="repeatRegisterPass" placeholder="Confirm Password" />
+                  <input type="text" class="registerNumber" placeholder="Phone Number" />
+                  <input type="text" class="registerAddress" placeholder="Current Residence" />
+                  <button class="registerBtn">REGISTER</button>
+                  <div class="registerError"></div>
+              </div>
+
+              <span class="cursor">Log into your Account</span>
+
+              
+          </div>
+
+      </div>
+
+
+      <div class="wrapper">
+          <button class="logout">logout</button>
+      </div>
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCsoB2PBDzx-rKbhUPmDWEX2NSVacjOcqg",
+        authDomain: "cyclo-effd6.firebaseapp.com",
+        databaseURL: "https://cyclo-effd6.firebaseio.com",
+        projectId: "cyclo-effd6",
+        storageBucket: "",
+        messagingSenderId: "339544034463"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script type="text/javascript" src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="js/server.js"></script>
+    <script type="text/javascript" src="js/activity.js"></script>
+
+<style type="text/css">
+
+</style>
+  </body>
+</html>
+
+

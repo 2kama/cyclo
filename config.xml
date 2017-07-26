@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.masbleinc.app.lss" version="1.0.0" versionCode = "1">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
+    </feature>
+    
+    <allow-intent href="market:*" />
+    <name>LSS</name>
+    <description>
+        Law Students' Society Constitution App
+    </description>
+    <author email="mishealkama@gmail.com" href="http://mishaelkama.me">
+        Mishael Kama
+    </author>
+
+    <preference name="orientation" value="portrait" />
+
+
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>
